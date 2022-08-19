@@ -10,10 +10,17 @@ logging:
 #03.데이터베이스 접근 로직 테스트 정의1 :노트 확인(user 생성)
 spring:
   datasource:
+#    mysql 설정
     url: jdbc:mysql://localhost:3306/board
     username: yjyjss01
     password: tjdudwls!@
     driver-class-name: com.mysql.cj.jdbc.Driver
+
+#    H2 설정
+#    url: jdbc:h2:mem:testdb; db
+#    username: sa
+#    driver-class-name: org.h2.Driver
+
   jpa:
     defer-datasource-initialization: true
     hibernate.ddl-auto: create
@@ -22,5 +29,5 @@ spring:
     properties:
       hibernate.format_sql: true
       hibernate.default_batch_fetch_size: 100
-  h2.console.enabled: true
+#  h2.console.enabled: false
   sql.init.mode: always
